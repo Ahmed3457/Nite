@@ -10,7 +10,7 @@ chdir(path.dirname(__file__))
 USERPROFILE = getenv('USERPROFILE')
 APPDATA = getenv('APPDATA')
 
-Repository = 'https://raw.githubusercontent.com/Aetopia/Nite'
+Repository = 'https://raw.githubusercontent.com/Ahmed3457/Nite'
 if path.exists('Options.ini') is False:
 	request.urlretrieve(f'{Repository}/main/Options.ini', 'Options.ini')
 Options = ConfigParser()
@@ -23,7 +23,7 @@ elif len(argv) >= 2:
 	Version = argv[1]	
 	Server = ''
 elif len(argv) == 1:
-	exit(1)	
+	quit(1)	
 
 Directory = Options['Directories'][Version]
 Arguments = Options['Java']['Arguments']
